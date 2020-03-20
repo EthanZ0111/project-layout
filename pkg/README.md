@@ -1,6 +1,6 @@
 # `/pkg`
 
-Library code that's ok to use by external applications (e.g., `/pkg/mypubliclib`). Other projects will import these libraries expecting them to work, so think twice before you put something here :-) Note that the `internal` directory is a better way to ensure your private packages are not importable because it's enforced by Go. The `/pkg` directory is still a good way to explicitly communicate that the code in that directory is safe for use by others.
+Library code that's ok to use by external applications (e.g., `/pkg/mypubliclib`). Other projects will import these libraries expecting them to work, so think twice before you put something here :-) Note that the `internal` directory is a better way to ensure your private packages are not importable because it's enforced by Go. The `/pkg` directory is still a good way to explicitly communicate that the code in that directory is safe for use by others. The [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) blog post by Travis Jeffery provides a good overview of the `pkg` and `internal` directories and when it might make sense to use them.
 
 It's also a way to group Go code in one place when your root directory contains lots of non-Go components and directories making it easier to run various Go tools (as mentioned in these talks: [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) from GopherCon EU 2018, [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) and [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 
@@ -10,10 +10,10 @@ Ok not to use it if your app project is really small and where an extra level of
 
 Examples:
 
-* https://github.com/gogs/gogs/tree/master/pkg
 * https://github.com/prometheus/prometheus/tree/master/pkg
 * https://github.com/jaegertracing/jaeger/tree/master/pkg
 * https://github.com/istio/istio/tree/master/pkg
+* https://github.com/GoogleContainerTools/kaniko
 * https://github.com/google/gvisor/tree/master/pkg
 * https://github.com/google/syzkaller/tree/master/pkg
 * https://github.com/perkeep/perkeep/tree/master/pkg
@@ -34,7 +34,6 @@ Examples:
 * https://github.com/flynn/flynn/tree/master/pkg
 * https://github.com/jesseduffield/lazygit/tree/master/pkg
 * https://github.com/gopasspw/gopass/tree/master/pkg
-* https://github.com/sourcegraph/sourcegraph/tree/master/pkg
 * https://github.com/sosedoff/pgweb/tree/master/pkg
 * https://github.com/GoogleContainerTools/skaffold/tree/master/pkg
 * https://github.com/knative/serving/tree/master/pkg
@@ -49,10 +48,7 @@ Examples:
 * https://github.com/dexidp/dex/tree/master/pkg
 * https://github.com/pusher/oauth2_proxy/tree/master/pkg
 * https://github.com/pdfcpu/pdfcpu/tree/master/pkg
-* https://github.com/weaveworks/kured
-* https://github.com/weaveworks/footloose
-* https://github.com/weaveworks/ignite
+* https://github.com/weaveworks/kured/pkg
+* https://github.com/weaveworks/footloose/pkg
+* https://github.com/weaveworks/ignite/pkg
 * https://github.com/tmrts/boilr/tree/master/pkg
-
-
-
